@@ -1,0 +1,38 @@
+# --- PyTorch with CUDA Support ---
+# IMPORTANT: Do NOT install torch via this file with a simple `pip install -r requirements.txt`.
+# It will likely install a CPU-only version.
+# Instead, visit the official PyTorch website to get the correct command for your CUDA version:
+# https://pytorch.org/get-started/locally/
+# The versions below are known to be compatible. Find the command for your CUDA version (e.g., 11.8 or 12.1).
+# Example command (for CUDA 12.1 on Windows):
+# pip3 install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121
+
+# --- Core LangChain Stack ---
+langchain
+langchain-community
+langchain_experimental
+
+# --- Local LLM and Vector DB ---
+ollama
+chromadb
+# Pinned versions to resolve the torch/transformers dependency conflict
+sentence-transformers==2.7.0
+transformers==4.38.2
+
+# --- Web Framework and Server ---
+Flask
+waitress
+
+# --- Utilities ---
+colorama
+pandas
+bcrypt
+SQLAlchemy
+lark
+
+# --- File Loaders for source_tuning.py ---
+pypdf
+python-docx
+openpyxl
+unstructured
+markdown
